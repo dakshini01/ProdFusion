@@ -1,0 +1,8 @@
+issue,replacement,status
+split column (text),"split_code (0=train,1=val,2=test)",converted to numeric
+wip column (raw with missing values),wip_imputed (filled with department median),"imputed, no missing"
+department (text column),dept_bin (0/1 numeric),"excluded text, using binary"
+day (text column),sin_dow + cos_dow (cyclical numeric),"excluded text, using numeric"
+outlier_reason (text column),outlier_flag (0/1 numeric flag),"excluded text, using flag"
+team_dept_id (text column),team_dept_idx (integer encoding),"excluded text, using code"
+Missing values in numeric columns,Filled with 0 or median,all missing values filled
