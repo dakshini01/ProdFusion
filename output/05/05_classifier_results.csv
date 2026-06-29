@@ -1,31 +1,31 @@
 Classifier,Split,Task,Accuracy,Precision,Recall,F1,AUC
-LR,noSMOTE,3class,53.89,54.66,53.89,45.4,64.96
-DT,noSMOTE,3class,76.11,75.82,76.11,75.93,81.69
-RF,noSMOTE,3class,80.0,80.0,80.0,79.6,89.99
-SVM,noSMOTE,3class,47.22,22.3,47.22,30.29,64.92
-NB,noSMOTE,3class,49.72,54.86,49.72,48.59,68.57
-MLP,noSMOTE,3class,42.5,57.64,42.5,30.61,66.98
+Logistic Regression,noSMOTE,3class,53.89,54.66,53.89,45.4,64.96
+Decision Tree,noSMOTE,3class,76.11,75.82,76.11,75.93,81.69
+Random Forest,noSMOTE,3class,80.0,80.0,80.0,79.6,89.99
+Support Vector Machine,noSMOTE,3class,47.22,22.3,47.22,30.29,64.92
+naïve Bayes,noSMOTE,3class,49.72,54.86,49.72,48.59,68.57
+Neural Network,noSMOTE,3class,42.5,57.64,42.5,30.61,66.98
 GBT,noSMOTE,3class,80.0,80.12,80.0,79.37,91.63
-LR,SMOTE,3class,45.28,48.81,45.28,45.12,64.56
-DT,SMOTE,3class,77.78,77.53,77.78,77.52,82.87
-RF,SMOTE,3class,79.44,79.3,79.44,79.16,90.03
-SVM,SMOTE,3class,36.11,42.71,36.11,34.13,58.26
-NB,SMOTE,3class,41.94,51.82,41.94,40.93,67.56
-MLP,SMOTE,3class,40.56,41.56,40.56,38.88,54.45
+Logistic Regression,SMOTE,3class,45.28,48.81,45.28,45.12,64.56
+Decision Tree,SMOTE,3class,77.78,77.53,77.78,77.52,82.87
+Random Forest,SMOTE,3class,79.44,79.3,79.44,79.16,90.03
+Support Vector Machine,SMOTE,3class,36.11,42.71,36.11,34.13,58.26
+naïve Bayes,SMOTE,3class,41.94,51.82,41.94,40.93,67.56
+Neural Network,SMOTE,3class,40.56,41.56,40.56,38.88,54.45
 GBT,SMOTE,3class,79.72,79.67,79.72,79.25,91.47
-LR,noSMOTE,2class,73.89,73.25,73.89,69.18,76.17
-DT,noSMOTE,2class,84.72,84.76,84.72,84.74,83.36
-RF,noSMOTE,2class,84.72,84.55,84.72,84.62,90.97
-SVM,noSMOTE,2class,69.44,48.23,69.44,56.92,76.11
-NB,noSMOTE,2class,70.0,67.65,70.0,68.07,72.76
-MLP,noSMOTE,2class,75.83,74.53,75.83,74.1,80.58
+Logistic Regression,noSMOTE,2class,73.89,73.25,73.89,69.18,76.17
+Decision Tree,noSMOTE,2class,84.72,84.76,84.72,84.74,83.36
+Random Forest,noSMOTE,2class,84.72,84.55,84.72,84.62,90.97
+Support Vector Machine,noSMOTE,2class,69.44,48.23,69.44,56.92,76.11
+naïve Bayes,noSMOTE,2class,70.0,67.65,70.0,68.07,72.76
+Neural Network,noSMOTE,2class,75.83,74.53,75.83,74.1,80.58
 GBT,noSMOTE,2class,84.72,84.4,84.72,84.28,91.77
-LR,SMOTE,2class,68.06,71.49,68.06,69.08,76.83
-DT,SMOTE,2class,83.06,83.1,83.06,83.08,81.43
-RF,SMOTE,2class,84.17,84.13,84.17,84.15,90.65
-SVM,SMOTE,2class,56.39,64.83,56.39,58.07,61.12
-NB,SMOTE,2class,57.22,73.14,57.22,57.95,72.83
-MLP,SMOTE,2class,49.44,78.06,49.44,46.95,70.38
+Logistic Regression,SMOTE,2class,68.06,71.49,68.06,69.08,76.83
+Decision Tree,SMOTE,2class,83.06,83.1,83.06,83.08,81.43
+Random Forest,SMOTE,2class,84.17,84.13,84.17,84.15,90.65
+Support Vector Machine,SMOTE,2class,56.39,64.83,56.39,58.07,61.12
+naïve Bayes,SMOTE,2class,57.22,73.14,57.22,57.95,72.83
+Neural Network,SMOTE,2class,49.44,78.06,49.44,46.95,70.38
 GBT,SMOTE,2class,85.28,85.49,85.28,85.37,91.43
 Imran et al. (Tree Ens.),Paper,3class,83.89,,,,
 Imran et al. (GBT+SMOTE),Paper,2class,86.39,,,,
