@@ -1,0 +1,6 @@
+artifact,path,exists,authoritative
+Model C posterior,bayesian/02_model_C_final_logwip_monotone.nc,True,True
+Model C prediction draws,models/02_model_C_posterior_predictions.npz,True,True
+Model C metadata,models/02_model_C_artifact_metadata.json,True,True
+Model C test intervals,models/02_model_c_test_predictions.csv,True,True
+Corrected Kalman v7.1 forecasts,models/03_v7_1_forecasts.csv,True,True

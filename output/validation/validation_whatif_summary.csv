@@ -1,0 +1,4 @@
+intervention,mean_productivity_uplift,median_productivity_uplift,mean_low_risk_change,median_probability_positive,median_probability_risk_decreases,n
+incentive_plus_20_BDT,-0.10620819205383834,0.04222334098454416,0.19761178455957482,0.9995,0.9995,360
+wip_minus_20_percent,-0.0032576864687660603,0.0,0.0061027061622202245,0.0,0.0,360
+workers_plus_5,0.018814581863516887,-0.0010797565674060638,-0.02800299917336364,0.3605,0.3605,360

@@ -1,0 +1,6 @@
+task,source,model,decision_rule,accuracy,auc,low_precision,low_recall,low_f1
+3-class,Paper,Tree ensemble (no SMOTE),Published result,0.8389,,0.84,0.99,0.91
+3-class,This project,Exact Bayesian Model C,Argmax posterior probability,0.7472222222222222,0.6466203559098861,0.4,0.28125,0.3302752293577982
+2-class,Paper,GBT + SMOTE,Published result,0.8639,0.9,0.93,0.88,0.91
+2-class,This project,Exact Bayesian Model C,P(low) ≥ 0.500,0.825,0.6754645270270271,0.5172413793103449,0.234375,0.3225806451612903
+2-class,This project,Exact Bayesian Model C,P(low) ≥ 0.333,0.7222222222222222,0.6754645270270271,0.2857142857142857,0.375,0.32432432432432434

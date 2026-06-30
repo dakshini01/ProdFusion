@@ -1,0 +1,6 @@
+factor,posterior_mean,hdi_3%,hdi_97%,P(effect > 0),P(effect < 0),bayesian_conclusion,paper_direction_or_rule,alignment_with_paper
+Incentive: 0 → 69.5 BDT (conditional at median WIP=560.0),1.0943965098977564,0.8929541411146187,1.3048429349149142,1.0,0.0,Credibly positive,Paper identifies incentive as primary and uses a 69.5 BDT split,Aligned
+WIP coefficient,0.40292750531298394,0.04705143502549661,0.7616466276623167,0.979,0.021,Credibly positive,Paper associates lower WIP with better productivity class,Not clearly aligned
+Number of workers coefficient,0.21296208040965156,-0.019934381865931532,0.45529145406064375,0.955,0.045,Uncertain / overlaps zero,Paper rules indicate more workers can shift cases away from low,Not clearly aligned
+Incentive × WIP interaction,0.6350300503675816,0.4800014840565117,0.7977629929065266,1.0,0.0,Credibly positive,Paper combines incentive and WIP in its decision rules,Interaction assessed; the paper gives a rule rather than a signed coefficient
+WIP × workers interaction,-0.36584775304064937,-0.5551684824310243,-0.15457738793730869,0.0,1.0,Credibly negative,Paper combines WIP and workers in its decision rules,Interaction assessed; the paper gives a rule rather than a signed coefficient

@@ -1,0 +1,4 @@
+wip_scenario,wip_pieces,mean_curve_minimum_incentive_for_risk_target,posterior_threshold_median_bdt,posterior_threshold_p03_bdt,posterior_threshold_p97_bdt,posterior_crossing_rate,risk_near_69_5_bdt,expected_productivity_near_69_5_bdt,diminishing_returns_candidate_bdt,paper_threshold_bdt,paper_inside_94_interval
+Low WIP,0.0,,0.0,0.0,118.04999999999993,0.214,0.8242329712846701,0.3965759509055552,10.0,69.5,True
+Median WIP,559.9999999999998,55.0,55.0,45.0,75.0,1.0,0.11272243500110456,0.8203694742319289,115.0,69.5,True
+High WIP,1075.0000000000002,45.0,45.0,35.0,65.0,1.0,0.08160659800369582,0.846769527135715,100.0,69.5,False

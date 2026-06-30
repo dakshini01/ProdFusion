@@ -1,0 +1,10 @@
+notebook_05_idea,status,implementation_here,reason
+Paper comparison table,Adopted,Published paper rows compared with exact Model C default and cost-sensitive results,Improves reporting without changing the model
+"Specificity, ECE, false counts, and expected cost",Adopted,Computed from exact Model C posterior low probabilities,Strengthens imbalance and probability validation
+Three confusion matrices and benchmark plots,Adopted,"3-class, binary default, and binary cost-sensitive",Clearer comparison with the garment paper
+Incentive contrast at the 69.5 BDT paper rule,Adopted and corrected,Exact Model C positive indicator + monotone spline + incentive×WIP interaction at median WIP,Uses the real fitted specification rather than a substitute coefficient
+Posterior threshold uncertainty,Adopted and expanded,"Posterior threshold distributions by low, median, and high WIP",Avoids reporting only a single mean-curve crossing
+Scenario productivity and low-risk plots,Adopted,"Baseline, +20 BDT, −20% WIP, and +5 workers",Improves prescriptive interpretation
+Refit a new Bayesian model in validation,Excluded,Authoritative Model C posterior and saved draws are loaded without fitting,A refit would no longer be the exact project model
+Fit a new residual Kalman correction on the paper split,Excluded,Corrected saved Kalman v7.1 forecasts are evaluated on their own temporal test,Prevents an unapproved third model and leakage-prone combined score
+Silently fall back to old dlm_forecasts.csv,Excluded,Only models/03_v7_1_forecasts.csv is accepted,The old schema caused incorrect alignment and KeyErrors

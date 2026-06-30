@@ -1,0 +1,14 @@
+variable,label,posterior_mean,hdi3,hdi97,prob_positive,prob_negative,direction,paper_comparison
+b_inc_positive,Positive incentive vs zero,-0.5705110483703549,-0.8663491764120246,-0.2864934271026402,0.00025,0.99975,credibly negative,Paper: incentive is primary; expected alignment is positive
+b_wip,log WIP,0.40865886360910786,0.04904330770007449,0.761609598759694,0.98175,0.01825,credibly positive,Paper: lower WIP is favorable; expected alignment is negative
+b_ot,log overtime,-0.08287149646797698,-0.1541557798377571,-0.017421157768635908,0.01,0.99,credibly negative,Not a direct paper rule
+b_smv,log SMV,0.020818417007488564,-0.21284271991221623,0.2424419333856209,0.5735,0.4265,uncertain / includes zero,Not a direct paper rule
+b_nw,log workers,0.21492790837596304,-0.018044676555801158,0.4573269939283002,0.959,0.041,uncertain / includes zero,Paper: more workers can be favorable; expected alignment is positive
+b_tp,targeted productivity,0.17581041980880321,0.12083301859829683,0.23211806268842358,1.0,0.0,credibly positive,Not a direct paper rule
+b_style,style changes,0.012998229731678744,-0.041023659458793535,0.06858552307729296,0.66525,0.33475,uncertain / includes zero,Not a direct paper rule
+b_sin,weekday sine,0.003236119909782972,-0.04826670875589278,0.05553723552525675,0.54025,0.45975,uncertain / includes zero,Not a direct paper rule
+b_cos,weekday cosine,0.0007101935294952504,-0.04895146841212778,0.0506589669134763,0.521,0.479,uncertain / includes zero,Not a direct paper rule
+b_dept,sewing department,-0.502103443369399,-1.5635765404664712,0.5468169924451741,0.17875,0.82125,uncertain / includes zero,Not a direct paper rule
+b_wip_miss,WIP missing indicator,0.752592963211814,-0.3190813426424989,1.83785860819287,0.905,0.095,uncertain / includes zero,Not a direct paper rule
+b_inc_wip,incentive × WIP,0.6306670575766999,0.472039232018357,0.7882788118064338,1.0,0.0,credibly positive,Paper rule combines incentive and WIP
+b_wip_nw,WIP × workers,-0.3617320328088575,-0.5563718448226412,-0.15317212683785417,0.00025,0.99975,credibly negative,Paper rule combines WIP and workers

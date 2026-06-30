@@ -1,0 +1,18 @@
+objective,status,evidence,caveat
+Exact Bayesian model identity,Covered,"Authoritative Model C posterior, metadata, split indices, and saved predictive draws",No Bayesian refit occurs in this validation notebook
+Paper 3-class comparison,Covered,Exact Model C paper holdout plus direct paper comparison table,"Published exact paper row membership is unavailable, so scores are benchmarked rather than claimed identical"
+Paper 2-class comparison,Covered,Exact posterior low probability with default and cost-sensitive decisions,No SMOTE is used by Model C
+Probability calibration and imbalance handling,Covered,"ROC, PR-AUC, Brier, ECE, specificity, false counts, and expected cost",Cost-sensitive threshold reflects the declared 2:1 false-negative cost ratio
+Driver comparison,Covered,"Fixed effects plus conditional 0→69.5 BDT incentive contrast, monotone spline, and interactions","Associational, not causal"
+69.5 BDT actionable threshold,Covered,"Posterior threshold distributions by low, median, and high WIP",A smooth model-based decision threshold is not proof of an abrupt causal breakpoint
+"Forecast MAE/RMSE, bias, and interval coverage",Covered,Corrected Kalman v7.1 future temporal test,Requires models/03_v7_1_forecasts.csv
+Probability of a low day,Covered,Exact Model C and corrected Kalman probability outputs,Paper and temporal test protocols remain separate
+Incentive/WIP/workers what-if,Covered,"Exact Model C expected productivity, low-risk, and uplift summaries","Offline predictive contrasts, not causal treatment effects"
+Budget allocation,Covered,Greedy posterior expected uplift,Offline model-based utility only
+Team heterogeneity,Covered,Team-specific posterior incentive intervention summaries,Uncertainty grows for teams with fewer held-out rows
+Weekday and quarter diagnostics,Covered descriptively,Kalman out-of-sample innovation groups,Quarter is not an exact Model C coefficient
+Style-change dips/change points,Covered,Kalman innovation flags compared with style-change rows,Association does not establish causation
+Bayesian + Kalman combined validation,Covered with restriction,Equal-weight ensemble on the dual-holdout intersection only,Not reported on rows that are in-sample for either component
+Incentive/WIP coefficient drift,Partially covered,Residual-level Kalman drift and post-hoc diagnostics,"Saved v7.1 DLM tracks a local residual level, not separate time-varying incentive/WIP slopes"
+Missing-WIP latent-state comparison,Partially covered,Indicator model plus scenario sensitivity,A separately fitted latent-WIP Bayesian model is not available
+SECOM external validation,Loaded if an external validation artifact exists; otherwise pending,validation_secom_metrics.csv is incorporated when available,"Notebook 05 contained no executable SECOM implementation, so this upgrade does not invent one"

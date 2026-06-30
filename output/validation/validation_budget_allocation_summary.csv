@@ -1,0 +1,2 @@
+budget_bdt,number_of_allocations,greedy_expected_total_uplift,greedy_total_uplift_p10,greedy_total_uplift_p90,random_expected_total_uplift_mean,random_expected_total_uplift_p95,probability_greedy_beats_random_draw
+720.0,72,3.4767140528799554,2.9670230374988615,3.975757942073779,-7.659014855950036,-5.524787458981594,1.0

@@ -1,0 +1,4 @@
+method,uses_SMOTE,decision_basis,accuracy,auc,low_precision,low_recall,low_f1,specificity,brier,ece_10bin,false_negatives,false_positives,expected_cost
+Paper GBT + SMOTE,Yes,Published oversampled classifier,0.8639,0.9,0.93,0.88,0.91,,,,,,
+Exact Model C — default,No,P(low) ≥ 0.500,0.825,0.6754645270270271,0.5172413793103449,0.234375,0.3225806451612903,0.9527027027027027,0.14397901134055416,0.07961443540894299,49.0,14.0,112.0
+Exact Model C — cost-sensitive,No,P(low) ≥ 0.333,0.7222222222222222,0.6754645270270271,0.2857142857142857,0.375,0.32432432432432434,0.7972972972972973,0.14397901134055416,0.07961443540894299,40.0,60.0,140.0

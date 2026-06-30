@@ -1,0 +1,4 @@
+wip_scenario,wip_pieces,risk_target,threshold_mean_bdt,threshold_median_bdt,threshold_p10_bdt,threshold_p90_bdt,threshold_p03_bdt,threshold_p97_bdt,posterior_crossing_rate,paper_threshold_bdt,paper_inside_94_interval,comparison
+Low WIP,0.0,0.2,5.607476635514018,0.0,0.0,0.0,0.0,118.04999999999993,0.214,69.5,True,Paper 69.5 BDT lies inside the 94% posterior threshold interval
+Median WIP,559.9999999999998,0.2,54.51,55.0,45.0,65.0,45.0,75.0,1.0,69.5,True,Paper 69.5 BDT lies inside the 94% posterior threshold interval
+High WIP,1075.0000000000002,0.2,46.38,45.0,40.0,55.0,35.0,65.0,1.0,69.5,False,Paper 69.5 BDT lies outside the 94% posterior threshold interval
