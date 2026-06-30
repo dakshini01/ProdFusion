@@ -1,0 +1,90 @@
+{
+  "model_name": "Model_C_final_logwip_monotone",
+  "posterior_file": "bayesian/02_model_C_final_logwip_monotone.nc",
+  "prediction_file": "models/02_model_C_posterior_predictions.npz",
+  "dataset_file": "models/garment_bayesian_glm.csv",
+  "dataset_sha256": "76526c9ec5b078bec455a1a23194ac643bfddadf216c7fb11fc460429f868e05",
+  "random_seed": 1234,
+  "test_size": 0.3,
+  "n_total": 1197,
+  "n_fit": 837,
+  "n_test": 360,
+  "wip_strategy": "log_wip_imputed + wip_missing_flag",
+  "target": "productivity_beta_smithson_verkuilen",
+  "feature_columns": [
+    "log_incentive",
+    "log_wip_imputed",
+    "log_over_time",
+    "log_smv",
+    "log_workers",
+    "targeted_productivity",
+    "no_of_style_change",
+    "sin_dow",
+    "cos_dow"
+  ],
+  "scaler_mean": [
+    1.9441129895840734,
+    3.87661471887673,
+    7.902452425436699,
+    2.343268103312866,
+    3.2169854148963206,
+    0.7314217443249701,
+    0.14336917562724014,
+    -0.009312101115961629,
+    -0.010155316606929527
+  ],
+  "scaler_scale": [
+    2.0138825154381084,
+    3.4085443496731758,
+    1.5596099652080502,
+    0.9009324675707029,
+    0.8784454201419988,
+    0.09729684667584285,
+    0.4216309275867317,
+    0.7164873655465669,
+    0.6974639842526346
+  ],
+  "spline_degree": 3,
+  "spline_knots_standardized_log_incentive": [
+    0.6127173910616309,
+    1.0882008284551987,
+    1.5636842658487664,
+    2.039167703242334,
+    2.514651140635902,
+    2.9901345780294695
+  ],
+  "spline_lower": 0.6127173910616309,
+  "spline_upper": 2.9901345780294695,
+  "n_spline_terms": 7,
+  "team_labels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "formula": "team intercept + positive-incentive indicator + monotone incentive spline + log WIP + log overtime + log SMV + log workers + targeted productivity + style changes + weekday sine/cosine + department + WIP-missing indicator + incentive\u00d7WIP + WIP\u00d7workers",
+  "sampling": {
+    "draws": 1000,
+    "tune": 1500,
+    "chains": 4,
+    "target_accept": 0.95,
+    "divergences": 0,
+    "max_rhat": 1.0,
+    "min_ess_bulk": 1467.0
+  },
+  "test_metrics": {
+    "mae": 0.09497238161620256,
+    "rmse": 0.13013151725325878,
+    "r2": 0.41345769546428845,
+    "coverage80": 0.8444444444444444,
+    "coverage95": 0.9527777777777777
+  }
+}
