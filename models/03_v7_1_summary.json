@@ -1,0 +1,96 @@
+{
+  "version": "7.1",
+  "selected_alpha": 0.01,
+  "blend_weight_dlm": 0.65,
+  "pool_strength": 30.0,
+  "robust_clip": 2.0,
+  "tau_productivity": 0.75,
+  "interval_k80": 1.269079239345939,
+  "interval_k95": 2.163065924412218,
+  "alarm_threshold": 0.3921317421776347,
+  "metrics": [
+    {
+      "split": "train",
+      "N": 823,
+      "Final_MAE": 0.08884058501928598,
+      "Final_RMSE": 0.13985776432052796,
+      "RawDLM_RMSE": 0.14992451931579193,
+      "GroupMean_RMSE": 0.15948389728439477,
+      "LastValue_RMSE": 0.18122430576757131,
+      "StaticRidge_RMSE": 0.14357692961128501,
+      "Skill_vs_GroupMean_pct": 12.306027942663773,
+      "Skill_vs_StaticRidge_pct": 2.59036413498059,
+      "Coverage80": 0.8554070473876063,
+      "Coverage95": 0.9671931956257594,
+      "AUC": 0.8685642501830668,
+      "AP": 0.8185589960198174,
+      "Brier": 0.1435627176282409
+    },
+    {
+      "split": "validation",
+      "N": 182,
+      "Final_MAE": 0.10987357626356185,
+      "Final_RMSE": 0.15193421206387317,
+      "RawDLM_RMSE": 0.15912693286546864,
+      "GroupMean_RMSE": 0.20416641906297311,
+      "LastValue_RMSE": 0.18875607468650002,
+      "StaticRidge_RMSE": 0.17463308344180922,
+      "Skill_vs_GroupMean_pct": 25.583152821517352,
+      "Skill_vs_StaticRidge_pct": 12.998036185680538,
+      "Coverage80": 0.7967032967032966,
+      "Coverage95": 0.945054945054945,
+      "AUC": 0.7899659863945578,
+      "AP": 0.8256529813332837,
+      "Brier": 0.18592106597199423
+    },
+    {
+      "split": "test",
+      "N": 192,
+      "Final_MAE": 0.08597415057320175,
+      "Final_RMSE": 0.13160751262638357,
+      "RawDLM_RMSE": 0.145365176458413,
+      "GroupMean_RMSE": 0.1619858833047519,
+      "LastValue_RMSE": 0.16833631801681034,
+      "StaticRidge_RMSE": 0.13299183327978056,
+      "Skill_vs_GroupMean_pct": 18.753714866138072,
+      "Skill_vs_StaticRidge_pct": 1.0409065122703764,
+      "Coverage80": 0.8854166666666666,
+      "Coverage95": 0.9791666666666666,
+      "AUC": 0.8717105263157894,
+      "AP": 0.8150082427640531,
+      "Brier": 0.15179290923968985
+    }
+  ],
+  "acceptance_checks": [
+    {
+      "check": "Validation final forecast beats group-mean baseline",
+      "passed": true,
+      "value": 25.583152821517352,
+      "target": "> 0%"
+    },
+    {
+      "check": "Test final forecast beats group-mean baseline",
+      "passed": true,
+      "value": 18.753714866138072,
+      "target": "> 0%"
+    },
+    {
+      "check": "Test final forecast is no worse than static Ridge",
+      "passed": true,
+      "value": 1.0409065122703764,
+      "target": ">= -1%"
+    },
+    {
+      "check": "Test 80% coverage reasonably calibrated",
+      "passed": true,
+      "value": 0.8854166666666666,
+      "target": "0.70 to 0.90"
+    },
+    {
+      "check": "Test 95% coverage reasonably calibrated",
+      "passed": true,
+      "value": 0.9791666666666666,
+      "target": "0.90 to 1.00"
+    }
+  ]
+}
