@@ -9,8 +9,8 @@
   "n_total": 1197,
   "n_fit": 837,
   "n_test": 360,
-  "wip_strategy": "log_wip_imputed + wip_missing_flag",
-  "target": "productivity_beta_smithson_verkuilen",
+  "wip_strategy": "log_wip_imputed + wip_missing_flag (zero-impute; see Model D for latent alternative)",
+  "target": "productivity_beta_smithson_verkuilen (verified, computed in this notebook)",
   "feature_columns": [
     "log_incentive",
     "log_wip_imputed",
@@ -78,13 +78,32 @@
     "target_accept": 0.95,
     "divergences": 0,
     "max_rhat": 1.0,
-    "min_ess_bulk": 1467.0
+    "min_ess_bulk": 1383.0
   },
   "test_metrics": {
-    "mae": 0.09497238161620256,
-    "rmse": 0.13013151725325878,
-    "r2": 0.41345769546428845,
-    "coverage80": 0.8444444444444444,
-    "coverage95": 0.9527777777777777
-  }
+    "mae": 0.09503133148648907,
+    "rmse": 0.13015758413826622,
+    "r2": 0.41322268918073535,
+    "coverage80": 0.8527777777777777,
+    "coverage95": 0.9555555555555556
+  },
+  "alternative_models": {
+    "D_latent_wip": {
+      "posterior_file": "bayesian/02_model_D_latent_wip.nc",
+      "test_metrics": {
+        "mae": 0.0950982486169718,
+        "rmse": 0.13377420484925404,
+        "r2": 0.38016069684484666
+      },
+      "divergences": 0,
+      "max_rhat": 1.72
+    },
+    "C_mean_impute": {
+      "posterior_file": "bayesian/02_model_C_mean_impute.nc"
+    },
+    "C_logitnormal": {
+      "posterior_file": "bayesian/02_model_C_logitnormal.nc"
+    }
+  },
+  "best_model_by_loo": "D_latent_wip"
 }
