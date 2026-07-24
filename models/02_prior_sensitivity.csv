@@ -1,0 +1,16 @@
+prior_config,parameter,mean,sd,hdi_3%,hdi_97%
+tight_priors (0.5x),b_inc_positive,-0.348,0.135,-0.583,-0.09
+tight_priors (0.5x),b_wip,0.182,0.144,-0.079,0.44
+tight_priors (0.5x),b_tp,0.18,0.028,0.13,0.234
+tight_priors (0.5x),b_inc_wip,0.475,0.067,0.355,0.603
+tight_priors (0.5x),b_wip_nw,-0.208,0.089,-0.384,-0.047
+authoritative_priors (1.0x),b_inc_positive,-0.571,0.155,-0.867,-0.288
+authoritative_priors (1.0x),b_wip,0.409,0.19,0.052,0.764
+authoritative_priors (1.0x),b_tp,0.176,0.03,0.12,0.231
+authoritative_priors (1.0x),b_inc_wip,0.631,0.084,0.476,0.79
+authoritative_priors (1.0x),b_wip_nw,-0.362,0.106,-0.561,-0.16
+wide_priors (2.0x),b_inc_positive,-0.702,0.167,-1.024,-0.405
+wide_priors (2.0x),b_wip,0.52,0.215,0.122,0.901
+wide_priors (2.0x),b_tp,0.171,0.029,0.117,0.221
+wide_priors (2.0x),b_inc_wip,0.712,0.099,0.506,0.877
+wide_priors (2.0x),b_wip_nw,-0.459,0.116,-0.673,-0.248

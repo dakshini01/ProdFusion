@@ -10,7 +10,6 @@
   "n_fit": 837,
   "n_test": 360,
   "wip_strategy": "log_wip_imputed + wip_missing_flag",
-  "team_grouping": "team_dept_idx_24_series",
   "target": "productivity_beta_smithson_verkuilen",
   "feature_columns": [
     "log_incentive",
@@ -58,7 +57,6 @@
   "spline_upper": 2.9901345780294695,
   "n_spline_terms": 7,
   "team_labels": [
-    0,
     1,
     2,
     3,
@@ -70,20 +68,9 @@
     9,
     10,
     11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23
+    12
   ],
-  "formula": "team\u00d7dept intercept (24 series) + positive-incentive indicator + monotone incentive spline + log WIP + log overtime + log SMV + log workers + targeted productivity + style changes + weekday sine/cosine + WIP-missing indicator + incentive\u00d7WIP + WIP\u00d7workers",
+  "formula": "team intercept + positive-incentive indicator + monotone incentive spline + log WIP + log overtime + log SMV + log workers + targeted productivity + style changes + weekday sine/cosine + department + WIP-missing indicator + incentive\u00d7WIP + WIP\u00d7workers",
   "sampling": {
     "draws": 1000,
     "tune": 1500,
@@ -91,13 +78,13 @@
     "target_accept": 0.95,
     "divergences": 0,
     "max_rhat": 1.0,
-    "min_ess_bulk": 1278.0
+    "min_ess_bulk": 1467.0
   },
   "test_metrics": {
-    "mae": 0.09128746063560388,
-    "rmse": 0.12729046749733378,
-    "r2": 0.43878907421609714,
-    "coverage80": 0.8583333333333333,
+    "mae": 0.09497238161620256,
+    "rmse": 0.13013151725325878,
+    "r2": 0.41345769546428845,
+    "coverage80": 0.8444444444444444,
     "coverage95": 0.9527777777777777
   }
 }
