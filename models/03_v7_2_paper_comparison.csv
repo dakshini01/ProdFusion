@@ -2,5 +2,5 @@ Model,Split,Primary metric,AUC,RMSE,Note
 Paper Tree Ensemble (3-class),test (random 70/30),Accuracy = 83.89%,N/A (3-class),N/A,Imran et al. 2021; random split; accuracy is primary metric
 Paper GBT + SMOTE (2-class),test (random 70/30),Accuracy = 86.39%,reported separately,N/A,SMOTE oversampling; different class boundary; task differs
 DLM v7.2 — static Ridge only,test (chronological),RMSE = 0.1330,N/A,0.1330,Baseline — planning features only; no temporal dynamics
-DLM v7.2 — final forecast,validation (chronological),RMSE = 0.1519,0.7900,0.1519,Skill vs group mean = 25.6%
-DLM v7.2 — final forecast,test (chronological),RMSE = 0.1316,0.8717,0.1316,Skill vs group mean = 18.8%
+DLM v7.2 — final forecast,validation (chronological),RMSE = 0.1519,0.8128,0.1519,Skill vs group mean = 25.6%
+DLM v7.2 — final forecast,test (chronological),RMSE = 0.1316,0.8536,0.1316,Skill vs group mean = 18.8%
