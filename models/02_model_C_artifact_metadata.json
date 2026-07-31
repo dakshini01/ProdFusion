@@ -1,6 +1,6 @@
 {
-  "model_name": "Model_C_final_logwip_monotone",
-  "posterior_file": "bayesian/02_model_C_final_logwip_monotone.nc",
+  "model_name": "Model_C_improved_variable_phi_random_slopes",
+  "posterior_file": "bayesian/02_model_C_improved_variable_phi_random_slopes.nc",
   "prediction_file": "models/02_model_C_posterior_predictions.npz",
   "dataset_file": "models/garment_bayesian_glm.csv",
   "dataset_sha256": "76526c9ec5b078bec455a1a23194ac643bfddadf216c7fb11fc460429f868e05",
@@ -9,6 +9,13 @@
   "n_total": 1197,
   "n_fit": 837,
   "n_test": 360,
+  "quarter_labels": [
+    "Quarter 0",
+    "Quarter 1",
+    "Quarter 2",
+    "Quarter 3",
+    "Quarter 4"
+  ],
   "wip_strategy": "log_wip_imputed + wip_missing_flag",
   "target": "productivity_beta_smithson_verkuilen",
   "feature_columns": [
@@ -70,7 +77,7 @@
     11,
     12
   ],
-  "formula": "team intercept + positive-incentive indicator + monotone incentive spline + log WIP + log overtime + log SMV + log workers + targeted productivity + style changes + weekday sine/cosine + department + WIP-missing indicator + incentive\u00d7WIP + WIP\u00d7workers",
+  "formula": "team intercept + team-specific incentive response + monotone incentive spline + team-specific log WIP slope + log overtime + log SMV + log workers + targeted productivity + style changes + weekday sine/cosine + quarter-of-month effect + department + WIP-missing indicator + incentive\u00d7WIP + WIP\u00d7workers + variable Beta precision by department/team",
   "sampling": {
     "draws": 1000,
     "tune": 1500,
@@ -78,13 +85,13 @@
     "target_accept": 0.95,
     "divergences": 0,
     "max_rhat": 1.0,
-    "min_ess_bulk": 1467.0
+    "min_ess_bulk": 978.0
   },
   "test_metrics": {
-    "mae": 0.09497238161620256,
-    "rmse": 0.13013151725325878,
-    "r2": 0.41345769546428845,
-    "coverage80": 0.8444444444444444,
-    "coverage95": 0.9527777777777777
+    "mae": 0.09208184471416601,
+    "rmse": 0.13053997907742362,
+    "r2": 0.4097697934645945,
+    "coverage80": 0.8333333333333334,
+    "coverage95": 0.925
   }
 }
