@@ -1,0 +1,19 @@
+metric,value
+regression.RMSE,0.13053997907742362
+regression.MAE,0.09208184471416601
+regression.Bias,-0.003465463668733162
+regression.R2,0.4097697934645945
+classification.3-class Accuracy,0.6833333333333333
+classification.3-class Precision (macro),0.4947049351141423
+classification.3-class Recall (macro),0.4367496392496393
+classification.3-class F1 (macro),0.4422082459818309
+classification.2-class Accuracy,0.8333333333333334
+classification.2-class Precision (low),0.5555555555555556
+classification.2-class Recall (low),0.3125
+classification.2-class F1 (low),0.4
+classification.2-class AUC (low),0.7935494087837838
+calibration.Brier Score,0.1463462866325417
+calibration.ECE,0.1389139861111111
+calibration.Log Loss,0.992647442629641
+uncertainty.Coverage 80%,0.8333333333333334
+uncertainty.Coverage 95%,0.925

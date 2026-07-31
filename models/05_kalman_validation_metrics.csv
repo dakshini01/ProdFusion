@@ -1,0 +1,13 @@
+metric,value
+regression.RMSE,0.13160751262638357
+regression.MAE,0.08597415057320175
+regression.Bias,-0.0003887969780700844
+lowday.Precision (alarm),0.6213592233009708
+lowday.Recall (alarm),0.8421052631578947
+lowday.F1 (alarm),0.7150837988826816
+lowday.AUC (p_low),0.8717105263157894
+lowday.AP (p_low),0.8150082427640531
+lowday.Brier (p_low),0.1517929092396898
+calibration.Coverage80,0.8854166666666666
+calibration.Coverage95,0.9791666666666666
+acceptance.overall_pass,True

@@ -1,0 +1,41 @@
+{
+  "notebook": "05_validation",
+  "bayesian_model": "Model_C_improved_variable_phi_random_slopes",
+  "kalman_model_version": "7.1",
+  "dataset_sha256_verified": true,
+  "bayesian_metrics": {
+    "regression.RMSE": 0.13053997907742362,
+    "regression.MAE": 0.09208184471416601,
+    "regression.Bias": -0.003465463668733162,
+    "regression.R2": 0.4097697934645945,
+    "classification.3-class Accuracy": 0.6833333333333333,
+    "classification.3-class Precision (macro)": 0.4947049351141423,
+    "classification.3-class Recall (macro)": 0.4367496392496393,
+    "classification.3-class F1 (macro)": 0.4422082459818309,
+    "classification.2-class Accuracy": 0.8333333333333334,
+    "classification.2-class Precision (low)": 0.5555555555555556,
+    "classification.2-class Recall (low)": 0.3125,
+    "classification.2-class F1 (low)": 0.4,
+    "classification.2-class AUC (low)": 0.7935494087837838,
+    "calibration.Brier Score": 0.1463462866325417,
+    "calibration.ECE": 0.1389139861111111,
+    "calibration.Log Loss": 0.992647442629641,
+    "uncertainty.Coverage 80%": 0.8333333333333334,
+    "uncertainty.Coverage 95%": 0.925
+  },
+  "kalman_metrics": {
+    "regression.RMSE": 0.13160751262638357,
+    "regression.MAE": 0.08597415057320175,
+    "regression.Bias": -0.0003887969780700844,
+    "lowday.Precision (alarm)": 0.6213592233009708,
+    "lowday.Recall (alarm)": 0.8421052631578947,
+    "lowday.F1 (alarm)": 0.7150837988826816,
+    "lowday.AUC (p_low)": 0.8717105263157894,
+    "lowday.AP (p_low)": 0.8150082427640531,
+    "lowday.Brier (p_low)": 0.1517929092396898,
+    "calibration.Coverage80": 0.8854166666666666,
+    "calibration.Coverage95": 0.9791666666666666,
+    "acceptance.overall_pass": true
+  },
+  "kalman_acceptance_checks_passed": true
+}
