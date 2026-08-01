@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-08-01T04:32:18.906255+00:00",
+  "input_reduced_metadata": "models/secom/02_secom_phase2_metadata.json",
+  "selected_sensor_count": 120,
+  "feature_engineering": "Not applied. Anonymous SECOM sensors were not expanded with arbitrary polynomials or interactions.",
+  "outlier_audit": {
+    "method": "training Q1/Q3 with 3.0-IQR limits",
+    "fit_split": "train",
+    "treatment": "audit only; no row deletion and no clipping",
+    "report": "models/secom/secom_outlier_audit.csv"
+  },
+  "scaling": {
+    "method": "RobustScaler",
+    "fit_split": "train",
+    "quantile_range": [
+      25.0,
+      75.0
+    ],
+    "serialized_scaler": "models/secom/secom_robust_scaler.joblib",
+    "report": "models/secom/secom_scaling_report.csv"
+  },
+  "model_ready_files": {
+    "train": "models/secom/secom_train_model_ready.csv",
+    "validation": "models/secom/secom_val_model_ready.csv",
+    "test": "models/secom/secom_test_model_ready.csv"
+  }
+}

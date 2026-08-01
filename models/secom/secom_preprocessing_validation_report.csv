@@ -1,0 +1,32 @@
+check,status,details
+all_source_rows_preserved,PASS,"source=1567, train=1096, validation=235, test=236"
+train_precedes_validation,PASS,2008-09-19 21:14:00 <= 2008-09-19 21:59:00
+validation_precedes_test,PASS,2008-09-28 21:27:00 <= 2008-09-28 22:44:00
+clean_split_columns_identical,PASS,clean_columns=442
+reduced_split_columns_identical,PASS,reduced_columns=122
+model_ready_columns_identical,PASS,model_ready_columns=122
+labels_are_official_secom_values,PASS,"observed_labels=[np.int64(-1), np.int64(1)]"
+clean_train_has_no_missing_values,PASS,missing_values=0
+clean_train_has_no_non_finite_values,PASS,non_finite_values=0
+clean_validation_has_no_missing_values,PASS,missing_values=0
+clean_validation_has_no_non_finite_values,PASS,non_finite_values=0
+clean_test_has_no_missing_values,PASS,missing_values=0
+clean_test_has_no_non_finite_values,PASS,non_finite_values=0
+reduced_train_has_no_missing_values,PASS,missing_values=0
+reduced_train_has_no_non_finite_values,PASS,non_finite_values=0
+reduced_validation_has_no_missing_values,PASS,missing_values=0
+reduced_validation_has_no_non_finite_values,PASS,non_finite_values=0
+reduced_test_has_no_missing_values,PASS,missing_values=0
+reduced_test_has_no_non_finite_values,PASS,non_finite_values=0
+model_ready_train_has_no_missing_values,PASS,missing_values=0
+model_ready_train_has_no_non_finite_values,PASS,non_finite_values=0
+model_ready_validation_has_no_missing_values,PASS,missing_values=0
+model_ready_validation_has_no_non_finite_values,PASS,non_finite_values=0
+model_ready_test_has_no_missing_values,PASS,missing_values=0
+model_ready_test_has_no_non_finite_values,PASS,non_finite_values=0
+selected_feature_count_matches_model_ready_data,PASS,selected_features=120
+outlier_audit_covers_every_selected_feature_and_split,PASS,"audit_rows=360, expected=360"
+outlier_treatment_did_not_remove_rows,PASS,audit only; no clipping and no row deletion
+robust_scaler_width_matches_selected_features,PASS,"center_width=120, scale_width=120"
+robust_scaler_center_matches_training_medians,PASS,scaler center equals the unscaled training medians
+model_ready_train_medians_are_centered,PASS,all scaled training medians are approximately zero
