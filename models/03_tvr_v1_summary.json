@@ -1,0 +1,54 @@
+{
+  "version": "tvr_v1",
+  "tvr_features": [
+    "log_incentive",
+    "log_wip_imputed",
+    "log_workers"
+  ],
+  "hyperparameters": {
+    "rmse_val": NaN,
+    "delta_int": 0.9,
+    "delta_slope": 0.995,
+    "R": 0.05,
+    "slope_var0": 0.01
+  },
+  "metrics": [
+    {
+      "split": "train",
+      "N": 823,
+      "TVR_RMSE": 0.14779628443614287,
+      "TVR_MAE": 0.10166067586093337,
+      "GroupMean_RMSE": 0.15948389728439477,
+      "Skill_vs_GroupMean_pct": 7.328396814513708,
+      "Coverage80": 0.8602673147023087,
+      "Coverage95": 0.9720534629404617,
+      "OldLocalLevel_RMSE": 0.13985776432052796,
+      "Skill_vs_OldModel_pct": -5.67613829248786
+    },
+    {
+      "split": "validation",
+      "N": 182,
+      "TVR_RMSE": 0.16453416866684983,
+      "TVR_MAE": 0.1185410617839291,
+      "GroupMean_RMSE": 0.20416641906297311,
+      "Skill_vs_GroupMean_pct": 19.411738021373193,
+      "Coverage80": 0.7967032967032966,
+      "Coverage95": 0.945054945054945,
+      "OldLocalLevel_RMSE": 0.15193421206387317,
+      "Skill_vs_OldModel_pct": -8.293034486320723
+    },
+    {
+      "split": "test",
+      "N": 192,
+      "TVR_RMSE": 0.15339902007848608,
+      "TVR_MAE": 0.10339639062575882,
+      "GroupMean_RMSE": 0.1619858833047519,
+      "Skill_vs_GroupMean_pct": 5.300994784904145,
+      "Coverage80": 0.859375,
+      "Coverage95": 0.984375,
+      "OldLocalLevel_RMSE": 0.13160751262638357,
+      "Skill_vs_OldModel_pct": -16.557950999321545
+    }
+  ],
+  "note": "Full time-varying regression Kalman filter (H_t = x_t, vector state theta_t, A = I). Feature set selected via Model C posterior effect-size ranking, restricted to 3 drivers based on a documented dimensionality/overfitting trade-off study."
+}
