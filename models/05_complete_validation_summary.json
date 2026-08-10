@@ -1,0 +1,94 @@
+{
+  "notebook": "05_validation_bayesian_kalman_complete",
+  "validated_model": "Bayesian Model C + fused Kalman",
+  "artifact_family": "03_fused_*",
+  "evaluation_scope": "held-out test (split_code = 2)",
+  "has_true_test_split": true,
+  "n_primary_eval": 192,
+  "dataset_sha256_at_validation_time": "76526c9ec5b078bec455a1a23194ac643bfddadf216c7fb11fc460429f868e05",
+  "dataset_sha256_matches_model_metadata": true,
+  "bayesian_baseline": {
+    "mae": 0.1179598920720631,
+    "rmse": 0.17033848552346756,
+    "r2": -0.20872199758043086,
+    "bias_pred_minus_actual": -0.046055547463870146
+  },
+  "fused_forecast": {
+    "mae": 0.10572051735759347,
+    "rmse": 0.15722759617092782,
+    "r2_pooled": -0.029813099570573653,
+    "bias_pred_minus_actual": 0.0587821311273454,
+    "median_abs_error": 0.05755342289229293,
+    "pi90_coverage": 0.953125,
+    "pi90_mean_width": 0.655677428336354,
+    "pi90_interval_score": 0.8215033947002203,
+    "rmse_improvement_vs_bayesian_pct": 7.696962499254722,
+    "mae_improvement_vs_bayesian_pct": 10.375878190014332
+  },
+  "three_class": {
+    "definition": "Low < 0.85; Moderate [0.85, 0.95); Normal >= 0.95",
+    "method": "fit logistic regression on held-out actual_productivity; reuse same fitted classifier on fused predicted_productivity",
+    "feasibility_accuracy": 0.9916666666666667,
+    "feasibility_balanced_accuracy": 0.9829545454545454,
+    "fused_accuracy": 0.6979166666666666,
+    "fused_balanced_accuracy": 0.4684139784946236,
+    "fused_macro_f1": 0.43801369179490246
+  },
+  "two_class": {
+    "definition": "Low < 0.85; Not Low >= 0.85",
+    "method": "fit binary logistic regression on held-out actual_productivity; reuse same fitted classifier on fused predicted_productivity",
+    "feasibility_accuracy": 0.9916666666666667,
+    "fused_accuracy": 0.7083333333333334,
+    "fused_balanced_accuracy": 0.6238884045335658,
+    "fused_precision_low": 0.8613138686131386,
+    "fused_recall_low": 0.7612903225806451,
+    "fused_f1_low": 0.8082191780821918,
+    "fused_roc_auc": 0.7602441150828247,
+    "fused_brier": 0.19699919553537684,
+    "fused_ece_10bin": 0.175234599934807
+  },
+  "alarm": {
+    "scope": "held-out test",
+    "p_star": 0.39999999999999997,
+    "p_star_calibrated_on": "not recorded",
+    "balanced_accuracy": 0.571604938271605,
+    "precision": 0.2857142857142857,
+    "recall": 0.26666666666666666,
+    "f1": 0.27586206896551724,
+    "specificity": 0.8765432098765432,
+    "roc_auc": 0.5106995884773663,
+    "average_precision": 0.2846866258450816,
+    "brier": 0.15570261644741687,
+    "ece_10bin": 0.16547752506636543
+  },
+  "bayesian_posterior_only_validation": {
+    "n": 360,
+    "mae": 0.09208184471416601,
+    "rmse": 0.13053997907742362,
+    "r2": 0.4097697934645945,
+    "bias_pred_minus_actual": -0.003465463668733162,
+    "pi80_coverage": 0.8333333333333334,
+    "pi95_coverage": 0.925
+  },
+  "bayesian_posterior_low_calibration": {
+    "probability_source": "latent expected productivity",
+    "brier": 0.1916742887152778,
+    "log_loss": 1.8745329836457563,
+    "ece_10bin": 0.19260346502777767
+  },
+  "optional_artifacts_present": {
+    "bayes_posterior_predictions": true,
+    "bayes_test_predictions": true,
+    "bayes_loo": true,
+    "bayes_uplift": true,
+    "tvr_metrics": true,
+    "local_level_metrics": true,
+    "blend_metrics": false
+  },
+  "methodological_notes": [
+    "Filtered one-step-ahead predictions are used for forecasting claims.",
+    "Per-series R2 is diagnostic only; pooled R2 is the main reported R2.",
+    "Paper classification numbers are not directly comparable because class definitions differ.",
+    "If split_code=2 exists, held-out test rows are used; otherwise the notebook falls back to post-burn-in internal validation."
+  ]
+}

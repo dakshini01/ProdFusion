@@ -1,0 +1,4 @@
+method,accuracy,balanced_accuracy,macro_f1
+Operational features → Softmax,0.7375,0.3412698412698412,0.29856536378275506
+Operational features → Softmax (balanced),0.525,0.5174062049062049,0.4438384707762532
+Operational features → GMM (unsupervised),0.42916666666666664,0.37635281385281383,0.30953967196472193

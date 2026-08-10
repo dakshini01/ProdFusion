@@ -1,0 +1,4 @@
+model,rmse,mae,source_file
+Separate TVR Kalman,0.153399020078486,0.1033963906257588,03_tvr_v1_metrics.csv
+Separate local-level Kalman,0.1316075126263835,0.0859741505732017,03_v7_1_metrics.csv
+Current fused Bayesian + Kalman,0.15722759617092782,0.10572051735759347,03_fused_predictions.csv

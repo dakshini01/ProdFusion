@@ -1,0 +1,2 @@
+scope,nominal_coverage,observed_coverage,coverage_gap,mean_width,mean_interval_score
+held-out test (split_code = 2),0.9,0.953125,0.05312499999999998,0.655677428336354,0.8215033947002203
