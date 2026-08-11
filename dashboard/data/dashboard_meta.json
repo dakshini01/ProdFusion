@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-11T03:50:11.193080+00:00",
+  "generated_at_utc": "2026-08-11T08:28:55.985398+00:00",
   "source_predictions": "03_fused_predictions.csv",
   "source_alarm_probabilities": "03_fused_alarm_probabilities.csv",
   "source_dataset": "models/garment_full_cleaned.csv",
