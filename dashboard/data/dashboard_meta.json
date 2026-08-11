@@ -1,0 +1,19 @@
+{
+  "generated_at_utc": "2026-08-11T03:50:11.193080+00:00",
+  "source_predictions": "03_fused_predictions.csv",
+  "source_alarm_probabilities": "03_fused_alarm_probabilities.csv",
+  "source_dataset": "models/garment_full_cleaned.csv",
+  "p_star": 0.39999999999999997,
+  "watch_threshold": 0.3,
+  "n_rows": 1197,
+  "n_team_lines": 24,
+  "current_summary": {
+    "expected_productivity": 0.7659178276227164,
+    "high_risk_team_lines": 4,
+    "below_target_team_lines": 9,
+    "average_low_day_risk": 0.31596979015890864,
+    "highest_priority_team": "Team 6",
+    "highest_priority_department": "Finishing",
+    "highest_priority_risk": 0.4835732324796472
+  }
+}

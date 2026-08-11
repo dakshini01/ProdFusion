@@ -1,0 +1,4 @@
+streamlit.log
+cloudflared.log
+__pycache__/
+*.pyc
