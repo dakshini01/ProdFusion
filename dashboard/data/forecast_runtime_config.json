@@ -1,0 +1,53 @@
+{
+  "feature_columns": [
+    "log_incentive",
+    "log_wip_imputed",
+    "log_over_time",
+    "log_smv",
+    "log_workers",
+    "targeted_productivity",
+    "no_of_style_change",
+    "sin_dow",
+    "cos_dow"
+  ],
+  "dynamic_features": [
+    "intercept",
+    "incentive",
+    "wip",
+    "no_of_workers",
+    "over_time",
+    "smv",
+    "style_change"
+  ],
+  "quarter_labels": [
+    "Quarter 0",
+    "Quarter 1",
+    "Quarter 2",
+    "Quarter 3",
+    "Quarter 4"
+  ],
+  "quarter_effect_mean": {
+    "Quarter 0": 0.15221024898837857,
+    "Quarter 1": 0.038245626214194105,
+    "Quarter 2": -0.0029309026966038427,
+    "Quarter 3": -0.07403974792772099,
+    "Quarter 4": -0.11348522457824772
+  },
+  "b_dept_mean": -0.6227577939162867,
+  "b_inc_wip_mean": 0.23048241046980428,
+  "b_wip_nw_mean": -0.14434631914644483,
+  "spline_degree": 3,
+  "spline_lower": 0.6127173910616309,
+  "spline_upper": 2.9901345780294695,
+  "n_beta_transform": 1197,
+  "p_star": 0.39999999999999997,
+  "achievement_low_threshold": 0.85,
+  "watch_threshold": 0.3,
+  "q_shrink_scale": 0.001,
+  "em_shrink": 0.9,
+  "r_shrink": 0.75,
+  "global_r_final": 1.8596450030089842,
+  "latest_real_date": "2015-03-11",
+  "source_dataset": "models/garment_bayesian_glm.csv",
+  "source_logic": "Mirrors Notebook 03 forecast_next_day() and final fused state construction."
+}
