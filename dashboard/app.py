@@ -60,25 +60,64 @@ st.markdown(
     <style>
     .block-container {
         max-width: 1500px;
-        padding-top: 1.4rem;
+        padding-top: 1.2rem;
         padding-bottom: 2.5rem;
     }
 
     [data-testid="stSidebar"] {
-        min-width: 250px;
+        min-width: 260px;
+    }
+
+    [data-testid="stSidebar"] > div:first-child {
+        background: linear-gradient(180deg, #17233A 0%, #101B2D 100%);
+    }
+
+    .app-header {
+        background: linear-gradient(120deg, #17233A 0%, #24466D 60%, #2563EB 130%);
+        border-radius: 16px;
+        padding: 22px 28px;
+        margin-bottom: 18px;
+        color: #FFFFFF;
+    }
+
+    .app-header h1 {
+        color: #FFFFFF !important;
+        font-size: 1.65rem;
+        margin-bottom: 2px;
+    }
+
+    .app-header p {
+        color: #CBD5E1 !important;
+        margin-bottom: 0;
+        font-size: 0.95rem;
     }
 
     [data-testid="stMetric"] {
         background: #FFFFFF;
         border: 1px solid #E2E8F0;
-        border-radius: 12px;
-        padding: 14px 16px;
+        border-radius: 14px;
+        padding: 16px 18px;
         min-height: 132px;
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+        transition: box-shadow 0.15s ease;
+    }
+
+    [data-testid="stMetric"]:hover {
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
     }
 
     [data-testid="stMetricLabel"] p {
         font-weight: 700;
         color: #64748B;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+    }
+
+    [data-testid="stMetricValue"] {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #17233A;
     }
 
     [data-testid="stWidgetLabel"] p {
@@ -88,8 +127,45 @@ st.markdown(
 
     div[data-testid="stDataFrame"] {
         border: 1px solid #E2E8F0;
-        border-radius: 10px;
+        border-radius: 12px;
         overflow: hidden;
+    }
+
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 4px;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        border-radius: 8px 8px 0 0;
+        padding: 8px 16px;
+    }
+
+    div[data-testid="stExpander"] {
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+    }
+
+    hr {
+        margin: 0.8rem 0;
+    }
+
+    .sidebar-brand {
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 0;
+    }
+
+    .sidebar-sub {
+        color: #93A5C4;
+        font-size: 0.85rem;
+        margin-top: 2px;
+    }
+
+    .sidebar-legend-item {
+        color: #CBD5E1;
+        font-size: 0.85rem;
+        margin: 2px 0;
     }
     </style>
     """,
@@ -101,18 +177,34 @@ st.markdown(
 # Sidebar
 # ---------------------------------------------------------------------
 with st.sidebar:
-    st.title("🏭 Production Intelligence")
-    st.caption("Decision Support Dashboard")
-
-    st.markdown("### Daily Overview")
-    st.markdown("Team Forecasts")
-    st.markdown("Risk & Alerts")
-    st.markdown("Productivity Drivers")
-    st.markdown("What-If Planner")
-    st.markdown("Team Trends")
+    st.markdown(
+        '<p class="sidebar-brand">🏭 Production Intelligence</p>'
+        '<p class="sidebar-sub">Decision Support Dashboard</p>',
+        unsafe_allow_html=True,
+    )
+    st.caption("Use the page list above to navigate.")
     st.divider()
-    st.markdown("Forecast Reliability")
-    st.markdown("About")
+
+    st.markdown("**Risk legend**")
+    st.markdown(
+        '<p class="sidebar-legend-item">🔴 High Risk — at or above the alarm threshold</p>'
+        '<p class="sidebar-legend-item">🟠 Watch — approaching the alarm threshold</p>'
+        '<p class="sidebar-legend-item">🟢 Healthy — below the watch threshold</p>',
+        unsafe_allow_html=True,
+    )
+    st.divider()
+
+    if meta.get("generated_at_utc"):
+        st.caption(f"Data refreshed: {meta['generated_at_utc'][:16].replace('T', ' ')} UTC")
+    if meta.get("n_team_lines"):
+        st.caption(f"Tracking {meta['n_team_lines']} team-lines")
+
+    st.divider()
+    st.caption(
+        "Pages: **Daily Overview** (this page) · "
+        "**Next-Day Forecast** for what-if planning · "
+        "**Add / Update Data** to publish a completed day to GitHub."
+    )
 
 
 # ---------------------------------------------------------------------
@@ -121,12 +213,16 @@ with st.sidebar:
 header_left, header_right = st.columns([5, 1.2], vertical_alignment="center")
 
 with header_left:
-    st.title("Production Intelligence Dashboard")
-    st.caption(
-        "Latest available one-day-ahead productivity outlook and operational priorities"
+    st.markdown(
+        '<div class="app-header">'
+        '<h1>🏭 Production Intelligence Dashboard</h1>'
+        '<p>Latest available one-day-ahead productivity outlook and operational priorities</p>'
+        '</div>',
+        unsafe_allow_html=True,
     )
 
 with header_right:
+    st.write("")
     st.download_button(
         "⬇ Export Report",
         data=latest.to_csv(index=False).encode("utf-8"),
